@@ -12,6 +12,12 @@ body {
   margin-left: -55px;
   position: fixed;
 }
+.spec {
+  margin: 30px 5px 0 10px;
+}
+.text-flow {
+  white-space: pre-wrap;	
+}
 pre.prettyprint.prettyprinted {
   margin-bottom: 10px;
   padding: 2px; 
@@ -22,77 +28,6 @@ s2 {
   font-weight: bold;
   font-style: italic;
   font-family: "Helvetica";
-}
-
-.s2sub {
-  font-size: 1.1em; 
-  margin-bottom: 30px; 
-  margin-top: 0px; 
-  font-style: italic;
-  text-align: center;
-}
-
-.s2logosmall img {
-  text-align: left;
-  vertical-align: text-center;
-  margin-right: 10px;
-  margin-top:8px;
-  height: 35px;
-  width: 90px;
-}
-
-.s2logolarge img {
-  height: 70px;
-  width: 180px;
-}
-
-.search-icon {
-  height:20px;
-  width:20px;
-}
-
-.carousel .carousel-control {
-  text-shadow: none;
-  background-image: none;
-}
-
-.glyphicon-chevron-left {
-  color: black;
-}
-
-.glyphicon-chevron-right {
-  color: black;
-}
-
-.carousel-inner .item {
-  margin-left: 150px;
-}
-
-.carousel-inner .item .caption {
-  text-shadow: none;
-  color: #3A6AAC;
-  background-color: #FFFDFD;
-  font-size: 20px;
-  padding: 4px 4px 4px 6px;
-  margin: 15px 140px 10px 0px;
-  border: 1px solid #bbb;
-}
-
-.carousel-inner .item img {
-  border: 1px solid #021a40;
-}
-
-.carousel-indicators li {
-  background-color: #999;
-  background-color: rgba(70,70,70,.25);
-}
-
-.carousel-indicators .active {
-  background-color: #444;
-}
-
-nav {
- margin-top: 10px;
 }
 
 h1 {
@@ -152,6 +87,81 @@ h6 {
 text {
   white-space: pre-wrap;
 }
+.success_icon {
+  
+}
+.example {
+}
+
+.success {
+}
+.failure {
+}
+.error {
+}
+.skipped {
+}
+ul {
+  list-style-type: disc;
+}
+li.example.success {
+  list-style-image: url(../images/icon_success_sml.gif);
+  padding-left: 5px;
+}
+li.example.failure {
+  list-style-image: url(../images/icon_failure_sml.gif);
+  padding-left: 5px;
+}
+li.example.error {
+  list-style-image: url(../images/icon_error_sml.gif);
+  padding-left: 5px;
+}
+li.example.skipped {
+  list-style-image: url(../images/icon_skipped_sml.gif);
+  padding-left: 5px;
+}
+li.example.pending {
+  list-style-image: url(../images/icon_pending_sml.gif);
+  padding-left: 5px;
+}
+li.example.info {
+  list-style-image: url(../images/icon_info_sml.gif);
+  padding-left: 5px;
+}
+li.toggle {
+  list-style-image: url(../images/collapsed.gif);
+  padding-left: 10px;
+  padding-right: 0px
+}
+li.notoggle {
+  list-style-type: none;
+  padding-left: 12px;
+  padding-right: 0px
+}
+message.failure {
+  padding: 1px 3px 2px 3px;
+  background-color: rgba(255, 255, 153, 0.75);
+}
+message.error {
+  padding: 1px 3px 1px 3px;
+  background-color: rgba(255, 153, 153, 0.30);
+}
+li.step.error {
+  list-style-image: url(../images/icon_error_sml.gif);
+  padding-left: 5px;
+}
+
+stacktrace.failure {
+  margin-left:10px;
+  padding: 1px 3px 1px 3px;
+  background-color: rgba(255, 255, 153, 0.75);
+}
+stacktrace.error {
+  margin-left:10px;
+  padding: 2px 3px 2px 3px;
+  background-color: rgba(255, 153, 153, 0.30);
+}
+
 table {
   table-layout: auto;
   width: auto;
@@ -191,6 +201,38 @@ table td {
   border-width: 1px 1px 1px 1px;
   padding: 5px 5px 5px 5px;
 }
+table .success {
+  background-color: #CCFFCC;
+}
+table .failure {
+  background-color: #FFFF99;
+}
+table .error {
+  background-color: #FF9999;
+}
+table .skipped {
+  background-color: #DDDDDD;
+}
+table .info {
+  background-color: #FFFFFF;
+}
+table .success {
+  background-color: #CCFFCC;
+}
+table tr.even {
+  background-color: #FFFFFF;
+}
+table tr.odd {
+  background-color: #FFFFFF;
+}
+table td .none {
+  background-color: white;
+  padding: 5px 5px 5px 5px;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 14px;
+}
 div .tabbertab table {
   border: 0;
   border-width: 0;
@@ -198,6 +240,22 @@ div .tabbertab table {
   border-color: none;
   border-style: none;
   box-shadow: none;
+}
+
+.issues-toggle {
+  font-style: italic;
+  color: #5981B4;
+  font-size: 16px;
+}
+pre {
+  border: 0px;
+  margin-bottom: 10px;
+}
+.formstacktrace {
+  display: none;
+}
+.search-box {
+  margin-top: 15px;
 }
 
 .ribbon, .ribbon:before, .ribbon:after {box-sizing:content-box;}
