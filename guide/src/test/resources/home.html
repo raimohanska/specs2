@@ -64,7 +64,7 @@
     </div>
 -->
 
-    <div id="examples-carousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <div id="examples-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#carousel-0" data-slide-to="0" class="active"></li>
@@ -77,19 +77,62 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <div class="caption">Specify your software using a mix of text and Scala code</div>
-                <img src="./images/hello-world.png" alt="hello world example">
+                <pre><code class="prettyprint carousel-code">class HelloWorldSpec extends Specification { def is = s2"""
+
+  This is a specification to check the 'Hello world' string
+
+  The 'Hello world' string should
+    contain 11 characters                             $e1
+    start with 'Hello'                                $e2
+    end with 'world'                                  $e3
+                                                      """
+  def e1 = "Hello world" must haveSize(11)
+  def e2 = "Hello world" must startWith("Hello")
+  def e3 = "Hello world" must endWith("world")
+
+}</code></pre>
             </div>
             <div class="item">
                 <div class="caption">Test your code with <a href="www.scalacheck.org">ScalaCheck</a></div>
-                <img src="./images/hello-world.png" alt="hello world example">
+                <pre><code class="prettyprint carousel-code">class HelloWorldSpec extends Specification { def is = s2"""
+  This is a specification to check the 'Hello world' string
+    The 'Hello world' string should
+    contain 11 characters                             $e1
+    start with 'Hello'                                $e2
+    end with 'world'                                  $e3
+                                                      """
+  def e1 = "Hello world" must haveSize(11)
+  def e2 = "Hello world" must startWith("Hello")
+  def e3 = "Hello world" must endWith("world")
+}</code></pre>
             </div>
             <div class="item">
                 <div class="caption">Document your APIs with compiler-checked examples</div>
-                <img src="./images/hello-world.png" alt="hello world example">
+                <pre><code class="prettyprint carousel-code">class HelloWorldSpec extends Specification { def is = s2"""
+  This is a specification to check the 'Hello world' string
+    The 'Hello world' string should
+    contain 11 characters                             $e1
+    start with 'Hello'                                $e2
+    end with 'world'                                  $e3
+                                                      """
+  def e1 = "Hello world" must haveSize(11)
+  def e2 = "Hello world" must startWith("Hello")
+  def e3 = "Hello world" must endWith("world")
+}</code></pre>
             </div>
             <div class="item">
                 <div class="caption">Manage contexts for integration testing</div>
-                <img src="./images/hello-world.png" alt="hello world example">
+                <pre><code class="prettyprint carousel-code">class HelloWorldSpec extends Specification { def is = s2"""
+  This is a specification to check the 'Hello world' string
+    The 'Hello world' string should
+      contain 11 characters                             $e1
+      start with 'Hello'                                $e2
+      end with 'world'                                  $e3
+                                                        """
+  def e1 = "Hello world" must haveSize(11)
+  def e2 = "Hello world" must startWith("Hello")
+  def e3 = "Hello world" must endWith("world")
+}</code></pre>
             </div>
 
         </div>

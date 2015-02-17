@@ -70,12 +70,11 @@ s2 {
 
 .carousel-inner .item .caption {
   text-shadow: none;
-  color: #3A6AAC;
-  background-color: #FFFDFD;
-  font-size: 20px;
+  color: #485466;
+  background-color: #F9F7F7;
+  font-size: 25px;
   padding: 4px 4px 4px 6px;
   margin: 15px 140px 10px 0px;
-  border: 1px solid #bbb;
 }
 
 .carousel-inner .item img {
@@ -89,6 +88,25 @@ s2 {
 
 .carousel-indicators .active {
   background-color: #444;
+}
+
+.carousel pre {
+  background-color:white;
+  margin-right:140px;
+  padding: 10px 10px 15px 10px;
+}
+
+.prettyprint.carousel-code {
+  font-size:20px;
+}
+
+.prettyprint .str {
+ color: #2047CA;
+}
+
+.prettyprint .kwd {
+ font-weight: bold;
+ font-size: 19px
 }
 
 nav {
