@@ -120,16 +120,31 @@
             </div>
             <div class="item">
                 <div class="caption">Manage contexts for integration testing</div>
-                <pre><code class="prettyprint carousel-code">class HelloWorldSpec extends Specification { def is = s2"""
-  This is a specification to check the 'Hello world' string
-    The 'Hello world' string should
-      contain 11 characters                             $e1
-      start with 'Hello'                                $e2
-      end with 'world'                                  $e3
-                                                        """
-  def e1 = "Hello world" must haveSize(11)
-  def e2 = "Hello world" must startWith("Hello")
-  def e3 = "Hello world" must endWith("world")
+                <pre><code class="prettyprint carousel-code-smaller">class UsersSpec extends Specification with BeforeAll with Before {
+  def is = sequential ^ s2"""
+
+  We can create / remove users in the database
+    create a user                                    $create
+    list all users                                   $list
+    remove a user                                    $remove
+                                                     """
+  import DB._
+
+  def create = {
+    val id = db.createUser("me")
+    db.getUser(id).name must_== "me"
+  }
+
+  def list = {
+    List("me", "you").foreach(db.createUser)
+    db.listAllUsers.map(_.name).toSet must_== Set("me", "you")
+  }
+
+  // create a database before running anything
+  def beforeAll = createDatabase(databaseUrl)
+  // remove all data before running an example
+  def before = cleanDatabase(databaseUrl)
+
 }</code></pre>
             </div>
 
