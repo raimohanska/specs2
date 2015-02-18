@@ -107,7 +107,12 @@ img.s2logolarge {
   padding: 10px 10px 15px 10px;
 }
 
+
 .prettyprint.carousel-code {
+  font-size:20px;
+}
+
+.prettyprint.carousel-code-smaller {
   font-size:19px;
 }
 
