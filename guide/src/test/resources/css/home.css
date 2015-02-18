@@ -5,8 +5,7 @@ body {
   font-weight: normal;
   color: #3D3B3B;	
 }
-
-pre.prettyprint.prettyprinted {
+cpre.prettyprint.prettyprinted {
   margin-bottom: 10px;
   padding: 2px; 
   border: 0px;
@@ -109,7 +108,7 @@ img.s2logolarge {
 }
 
 .prettyprint.carousel-code {
-  font-size:20px;
+  font-size:19px;
 }
 
 .prettyprint .str {

@@ -84,16 +84,22 @@
             </div>
             <div class="item">
                 <div class="caption">Test your code with <a href="http://www.scalacheck.org">ScalaCheck</a></div>
-                <pre><code class="prettyprint carousel-code">class HelloWorldSpec extends Specification { def is = s2"""
-  This is a specification to check the 'Hello world' string
-    The 'Hello world' string should
-    contain 11 characters                             $e1
-    start with 'Hello'                                $e2
-    end with 'world'                                  $e3
+                <pre><code class="prettyprint carousel-code">class IntSumSpec extends Specification with ScalaCheck { def is = s2"""
+
+  The IntSum Monoid must respect Monoid laws
+    left identity                                     $leftid
+    right identity                                    $rightid
+    associativity                                     $associativity
                                                       """
-  def e1 = "Hello world" must haveSize(11)
-  def e2 = "Hello world" must startWith("Hello")
-  def e3 = "Hello world" must endWith("world")
+  import scalaz._, Scalaz._
+  import IntSumMonoid._
+
+  def leftid  = prop { i: Int => 0 |+| i === i }
+  def rightid = prop { i: Int => i |+| 0 === i }
+
+  def associativity = prop { (a: Int, b: Int, c: Int) =>
+    ((a |+| b) |+| c) === (a |+| (b |+| c))
+  }
 }</code></pre>
             </div>
             <div class="item">
